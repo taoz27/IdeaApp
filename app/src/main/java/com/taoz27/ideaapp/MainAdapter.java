@@ -90,7 +90,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             int rp = hasHead?position-1:position;
 //            nHolder.headView.setImageResource(R.mipmap.ic_launcher);
             final MyActivity activity=activities.get(rp);
-            nHolder.backView.setImageBitmap(MyApplication.backs.get(rp%5));
+            nHolder.backView.setImageBitmap(MyApplication.backs.get(rp%MyApplication.backs.size()));
             nHolder.insText.setText(activity.getInstitution());
 
             Calendar calendar=Calendar.getInstance();

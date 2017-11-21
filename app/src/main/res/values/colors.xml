@@ -23,9 +23,11 @@
     <color name="colorTextGreyTime">#8b949292</color>
     <color name="colorTextEdit">#c9000000</color>
     <color name="colorTextSide">#2d2d2d</color><!--侧滑栏的字体颜色-->
+    <color name="colorNormalItemText">#000</color>
 
     <color name="colorLabelTextSelect">#fff</color>
     <color name="colorLabelText">#03a9f4</color>
     <color name="colorLabelSelect">#03a9f4</color>
     <color name="colorLabel">#e9f8ff</color>
+
 </resources>

@@ -38,8 +38,8 @@ public class MyApplication extends Application{
 
     private void login(){
         MyHttp.Post(Urls.UserLogin)
-                .params("email","taoz27@163.com")
-                .params("password","taoz27")
+                .params("email","aa@163.com")
+                .params("password","aaaaaa")
                 .execute(new MyHttpRequestListener() {
                     @Override
                     public void onSuccess(String response) {
@@ -66,6 +66,7 @@ public class MyApplication extends Application{
         backs.add(BitmapFactory.decodeResource(getResources(),R.drawable.back2));
         backs.add(BitmapFactory.decodeResource(getResources(),R.drawable.back3));
         backs.add(BitmapFactory.decodeResource(getResources(),R.drawable.back4));
+        backs.add(BitmapFactory.decodeResource(getResources(),R.drawable.back5));
     }
     private void getAllCategories(){
         MyHttp.Get(Urls.GetAllCategory)

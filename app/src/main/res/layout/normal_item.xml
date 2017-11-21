@@ -45,7 +45,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/institution"
-                        android:textColor="#fff"
+                        android:textColor="@color/colorNormalItemText"
                         android:layout_marginTop="5dp"
                         android:gravity="center_vertical"
                         android:textSize="@dimen/textLarge"/>
@@ -53,7 +53,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/start_time"
-                        android:textColor="#fff"
+                        android:textColor="@color/colorNormalItemText"
                         android:gravity="center_vertical"
                         android:layout_marginTop="5dp"
                         android:textSize="@dimen/textNormal"/>
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/name"
                 android:textSize="@dimen/textLarge"
-                android:textColor="#fff"
+                android:textColor="@color/colorNormalItemText"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="10dp"

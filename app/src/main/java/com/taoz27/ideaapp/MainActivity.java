@@ -349,4 +349,9 @@ public class MainActivity extends AppCompatActivity {
     public interface HandleCallBack{
         void doThings();
     }
+
+    @Override
+    public void onBackPressed() {
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
 }

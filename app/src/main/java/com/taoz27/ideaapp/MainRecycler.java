@@ -36,6 +36,7 @@ public class MainRecycler extends RecyclerView{
     public void notifyDataChanged(){
         adapter.notifyDataSetChanged();
 //        adapter.notifyItemRangeChanged(0,activities.size());
+//        adapter.notifyItemMoved(0,activities.size());
     }
 
     void init(Context context){

@@ -50,7 +50,7 @@
                             android:id="@+id/institution"
                             android:textSize="@dimen/textNormal"
                             android:text="树蛙工作室"
-                            android:textColor="#fff"/>
+                            android:textColor="@color/colorNormalItemText"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                             android:layout_marginBottom="10dp"
                             android:id="@+id/name"
                             android:text="金溢杯编程大赛"
-                            android:textColor="#fff"/>
+                            android:textColor="@color/colorNormalItemText"/>
                     </LinearLayout>
                 </RelativeLayout>
 
