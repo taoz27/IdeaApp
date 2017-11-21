@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="发布活动" android:icon="@drawable/icon_rel" android:checked="true" android:id="@+id/menu_nav_release"/>
+    <item android:title="我的空间" android:icon="@drawable/icon_space" android:checked="true" android:id="@+id/menu_nav_mine"/>
+    <item android:title="设置" android:icon="@drawable/icon_setting" android:checked="true" android:id="@+id/menu_nav_setting"/>
+    <item android:title="退出" android:icon="@drawable/icon_exit" android:checked="true" android:id="@+id/menu_nav_exit"/>
+</menu>

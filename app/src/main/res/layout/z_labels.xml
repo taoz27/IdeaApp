@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.donkingliang.labels.LabelsView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/labels"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:labelBackground="@drawable/label_bg"
+    app:labelTextColor="@drawable/label_text_color"
+    app:labelTextSize="14sp"
+    app:labelTextPaddingBottom="9dp"
+    app:labelTextPaddingLeft="15dp"
+    app:labelTextPaddingRight="15dp"
+    app:labelTextPaddingTop="9dp"
+    app:selectType="SINGLE"
+    app:lineMargin="13dp"
+    app:wordMargin="9dp"/>

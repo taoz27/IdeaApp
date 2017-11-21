@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#0287c3</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBackground">#3000</color>
+    
+    <color name="colorBtnLight">#e9f8ff</color>
+    <color name="colorBtnDark">#03a9f4</color>
+    <color name="colorBtnRed">#fe7272</color>
+    <color name="colorBtnGrey">#dcdcdc</color>
+
+    <color name="colorTextBlue">#03a9f4</color>
+    <color name="colorTextWhite">#fff</color>
+    <color name="colorTextPink">#fe7272</color>
+    <color name="colorTextHint">#61000000</color>
+    <color name="colorTextBlack">#333333</color>
+    <color name="colorTextBlack1">#3a3a3a</color>
+    <color name="colorTextBlack2">#2f2f2f</color>
+    <color name="colorTextBlack3">#303030</color>
+    <color name="colorTextGrey">#878787</color>
+    <color name="colorTextGreyTime">#8b949292</color>
+    <color name="colorTextEdit">#c9000000</color>
+    <color name="colorTextSide">#2d2d2d</color><!--侧滑栏的字体颜色-->
+
+    <color name="colorLabelTextSelect">#fff</color>
+    <color name="colorLabelText">#03a9f4</color>
+    <color name="colorLabelSelect">#03a9f4</color>
+    <color name="colorLabel">#e9f8ff</color>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:title="">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#00000000"
+        android:id="@+id/back">
+        <ImageView
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_width"
+            android:background="#00000000"
+            android:id="@+id/left"
+            android:src="@drawable/icon_back"
+            android:gravity="left"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:textSize="@dimen/textLarge"
+            android:id="@+id/title"
+            android:text="广场"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="@dimen/icon_width_l"
+        android:layout_height="@dimen/icon_width_l"
+        android:layout_gravity="right"
+        android:id="@+id/right"
+        android:src="@drawable/icon_ok"
+        android:visibility="gone"
+        android:layout_marginRight="20dp"/>
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,648 @@
+{
+	"id": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+	"name": "contest",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "category",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"order": [
+				"1344ec32-15f1-77dc-09ed-13a75e83702b"
+			],
+			"owner": "2041924",
+			"folders_order": [],
+			"id": "490c37a7-9f28-5248-f971-4efd2f48606b"
+		},
+		{
+			"name": "function",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"order": [
+				"40ee6b43-5b61-f1eb-a575-b603db8fac77"
+			],
+			"owner": "2041924",
+			"folders_order": [],
+			"id": "f92561a8-eb50-cfb8-ce60-7a37ff7fb4f0"
+		},
+		{
+			"name": "user",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"order": [
+				"5c0db658-599f-7483-aa3e-3131431a1bc8",
+				"e5b49989-e502-1cbd-4568-6810c9e25d53",
+				"d8957704-2d21-3b41-3bbb-f1d9778dfac5",
+				"80ef92e5-8ad6-18d0-3369-155e3914e15a",
+				"fb867765-2000-6506-3630-c09502429888",
+				"d736ecf7-4209-377c-222e-3411537ff00d",
+				"fe67f223-da22-fe98-2c35-f4d971ac5c17",
+				"4ab871c5-3c19-7d5d-631f-95c1bf0c818e",
+				"0860bbb4-2ca7-f553-b25e-07dda2198505",
+				"2d25b8c1-bf99-c772-ef4e-3f0931e4d785",
+				"767f2a4b-8cd4-3d35-d54e-746e14996230"
+			],
+			"owner": "2041924",
+			"folders_order": [],
+			"id": "5ba8c71a-2971-0041-c537-f52dda3c1df6"
+		},
+		{
+			"name": "user/manage",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"order": [
+				"d54878f6-0fc2-166d-5920-08be6fee04cb",
+				"c2ccdb54-50e9-11ed-9ae4-143e99676cee",
+				"eea7d306-00e8-48a3-c835-04a3bf18be09",
+				"140a15c4-2dc5-8bed-3b69-cc0fb5d28bff",
+				"319f75fe-22f0-43a5-d749-4b7ea3e54b29"
+			],
+			"owner": "2041924",
+			"folders_order": [],
+			"id": "c0e50828-0087-911b-1683-58080a06d0a0"
+		}
+	],
+	"folders_order": [
+		"5ba8c71a-2971-0041-c537-f52dda3c1df6",
+		"c0e50828-0087-911b-1683-58080a06d0a0",
+		"f92561a8-eb50-cfb8-ce60-7a37ff7fb4f0",
+		"490c37a7-9f28-5248-f971-4efd2f48606b"
+	],
+	"timestamp": 1510584620470,
+	"owner": "2041924",
+	"public": false,
+	"requests": [
+		{
+			"id": "0860bbb4-2ca7-f553-b25e-07dda2198505",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/forget_reset_password.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835330052,
+			"name": "http://localhost:8080//user/forget_reset_password.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"jisuanjikexie@163.com\",\n\t\"newpassword\":\"jisuanjikexie\",\n\t\"token\":\"131b523e-4234-4de1-b62f-a35eeacf9ad2\"\n}"
+		},
+		{
+			"id": "1344ec32-15f1-77dc-09ed-13a75e83702b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://120.78.189.95/user/get_all_category.do",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835218567,
+			"name": "http://localhost:8080/user/get_all_category.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\n}"
+		},
+		{
+			"id": "140a15c4-2dc5-8bed-3b69-cc0fb5d28bff",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/manage/search.do",
+			"folder": "c0e50828-0087-911b-1683-58080a06d0a0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835277819,
+			"name": "http://localhost:8080//user/manage/search.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"id\":13\n}"
+		},
+		{
+			"id": "2d25b8c1-bf99-c772-ef4e-3f0931e4d785",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/reset_password.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835333638,
+			"name": "http://localhost:8080//user/reset_password.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"newpassword\":\"jisuanjikexie\"\n}"
+		},
+		{
+			"id": "319f75fe-22f0-43a5-d749-4b7ea3e54b29",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://120.78.189.95/user/manage/delete.do",
+			"folder": "c0e50828-0087-911b-1683-58080a06d0a0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835282018,
+			"name": "http://localhost:8080//user/manage/delete.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"id\":13\n}"
+		},
+		{
+			"id": "40ee6b43-5b61-f1eb-a575-b603db8fac77",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://120.78.189.95/function/search.do",
+			"folder": "f92561a8-eb50-cfb8-ce60-7a37ff7fb4f0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835198715,
+			"name": "http://localhost:8080/function/search.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"type\":\"content\",\n\t\"desc\":\"\",\n\t\"page\":0,\n\t\"pagesize\":2\n}"
+		},
+		{
+			"id": "4ab871c5-3c19-7d5d-631f-95c1bf0c818e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/forget_check_answer.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835325427,
+			"name": "http://localhost:8080//user/forget_check_answer.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"jisuanjikexie@163.com\",\n\t\"answer\":\"jisuanji\",\n\t\"question\":\"jisuanji\"\n\t\n}"
+		},
+		{
+			"id": "5c0db658-599f-7483-aa3e-3131431a1bc8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/login.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835289188,
+			"name": "http://localhost:8080///userlogin.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"jisuanjikexie@163.com\",\n\t\"password\":\"jisuanjikexie\"\n}"
+		},
+		{
+			"id": "767f2a4b-8cd4-3d35-d54e-746e14996230",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/update_information.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835337073,
+			"name": "http://localhost:8080//user/update_information.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"password\":\"jisuanjikexie\",\n\t\"institution\":\"计算机科协\",\n\t\"answer\":\"jisuanji\",\n\t\"question\":\"jisuanji\"\n}"
+		},
+		{
+			"id": "80ef92e5-8ad6-18d0-3369-155e3914e15a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/vilidate.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835302991,
+			"name": "http://localhost:8080///valid.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\n}"
+		},
+		{
+			"id": "c2ccdb54-50e9-11ed-9ae4-143e99676cee",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/manage/alter.do",
+			"folder": "c0e50828-0087-911b-1683-58080a06d0a0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835264506,
+			"name": "http://localhost:8080//user/manage/alter.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"id\":\"13\",\n\t\"name\":\"第一届电子设计大赛\",\n\t\"theme\":\"修改主题\",\n\t\"content\":\"修改活动内容\",\n\t\"lable\":\"电子设计\",\n\t\"starttime\":2000,\n\t\"endtime\":80000,\n\t\"place\":\"修改活动地点\",\n\t\"contact\":\"修改活动联系方式\"\n}"
+		},
+		{
+			"id": "d54878f6-0fc2-166d-5920-08be6fee04cb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/manage/add.do",
+			"folder": "c0e50828-0087-911b-1683-58080a06d0a0",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835256433,
+			"name": "http://localhost:8080//user/manage/add.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"第三届电子设计大赛\",\n\t\"theme\":\"主题\",\n\t\"content\":\"活动内容\",\n\t\"lable\":\"电子设计\",\n\t\"starttime\":0,\n\t\"endtime\":0,\n\t\"place\":\"活动地点\",\n\t\"contact\":\"活动联系方式\"\n}"
+		},
+		{
+			"id": "d736ecf7-4209-377c-222e-3411537ff00d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/logout.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835314637,
+			"name": "http://localhost:8080//user/logout.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\n\t\n}"
+		},
+		{
+			"id": "d8957704-2d21-3b41-3bbb-f1d9778dfac5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/check_valid.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835299055,
+			"name": "http://localhost:8080///user/check_valid.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"jisuanjikexie@163.com\"\n}"
+		},
+		{
+			"id": "e5b49989-e502-1cbd-4568-6810c9e25d53",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/register.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835293786,
+			"name": "http://localhost:8080//user/register.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"heihugongzuoshi@163.com\",\n\t\"password\":\"heihugongzuoshi\",\n\t\"institution\":\"黑虎工作室\",\n\t\"answer\":\"heihugongzuoshi\",\n\t\"question\":\"heihugongzuoshi\"\n}"
+		},
+		{
+			"id": "eea7d306-00e8-48a3-c835-04a3bf18be09",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/manage/list.do",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835271799,
+			"name": "http://localhost:8080//user/manage/list.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\n}"
+		},
+		{
+			"id": "fb867765-2000-6506-3630-c09502429888",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/get_user_info.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835309387,
+			"name": "http://localhost:8080//user/get_user_info.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"testjson2@163.com\",\n\t\"password\":\"testjson2\",\n\t\"institution\":\"测试机构\",\n\t\"answer\":\"testjson2\",\n\t\"question\":\"testjson2\"\n\t\n}"
+		},
+		{
+			"id": "fe67f223-da22-fe98-2c35-f4d971ac5c17",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://120.78.189.95/user/forget_get_question.do",
+			"folder": "5ba8c71a-2971-0041-c537-f52dda3c1df6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1510835321201,
+			"name": "http://localhost:8080//user/forget_get_question.do",
+			"description": "",
+			"collectionId": "20c6ac34-2b0d-bd59-be1a-b6fd02b4ae86",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"jisuanjikexie@163.com\"\n}"
+		}
+	]
+}
