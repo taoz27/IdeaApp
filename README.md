@@ -27,16 +27,10 @@
   管理员可以对主办方的身份进行认证，同时可以管理活动的分类信息。
 ## 2.3：项目原型部分截图展示
 ### 2.3.1--------app主页面（搜索活动），活动详细信息页面
-  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/1.png 
-
-)
-  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/2.png 
-
-)
+  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/1.png)
+  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/2.png)
 ### 2.3.2--------发布活动页面
-  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/3.png 
-
-)
+  ![image](https://github.com/BirdFlying123/infocollect/raw/v1.0/image/3.png)
   
 # 3.开发介绍：
 ## 3.1最终产品：
@@ -53,37 +47,21 @@
 # 4.gif图片
 ## 4.1游客
 ### 4.1.1搜索活动以及查看其详细信息
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/search.gif 
-
-)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/search.gif )
 ## 4.2主办方
 ### 4.2.1注册、登录、退出
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-登录.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/登录.gif)
 ### 4.2.2修改信息
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-修改个人信息.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/修改个人信息.gif)
 ### 4.2.3未认证发布活动（失败，不能发布）
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-未认证发布.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/未认证发布.gif)
 ### 4.2.4管理员认证
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-通过验证.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/通过验证.gif)
 ### 4.2.5认证后发布活动，查看我的空间
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-已认证发布.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/已认证发布.gif)
 ### 4.2.6修改删除活动
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/ 
-
-修改删除活动.gif)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/修改删除活动.gif)
 ## 4.3管理员
 ### 4.3.1通过验证
-![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/search.gif 
-
-)
+![image](https://github.com/taoz27/IdeaApp/raw/master/gifs/search.gif )
 
