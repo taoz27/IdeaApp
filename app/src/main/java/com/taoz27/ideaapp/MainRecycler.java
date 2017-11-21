@@ -28,19 +28,19 @@ public class MainRecycler extends RecyclerView{
     }
 
     public void setData(List<MyActivity> activities){
-        this.activities.clear();
-        this.activities.addAll(activities);
+        this.activities=activities;
+        adapter=new MainAdapter(getContext(),this.activities);
+        this.setAdapter(adapter);
     }
 
     public void notifyDataChanged(){
         adapter.notifyDataSetChanged();
+//        adapter.notifyItemRangeChanged(0,activities.size());
     }
 
     void init(Context context){
         this.setLayoutManager(new LinearLayoutManager(context));
-        this.activities=new ArrayList<>();
-        adapter=new MainAdapter(getContext(),this.activities);
-        this.setAdapter(adapter);
+//        this.activities=new ArrayList<>();
     }
 
     public MainRecycler(Context context) {

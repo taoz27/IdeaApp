@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         BaseResponse<List<MyActivity>> res= JsonUtils.fromJsonArray(response,MyActivity.class);
                         if (res.getStatus()==1) {
                             activities.clear();
-                            activities = res.getData();
+                            activities.addAll(res.getData());
                             if (recycler==null) {
                                 setupRecycler();
                             }else {
@@ -263,6 +263,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 setSearchFilter("classfiy",""+selectLableId);
                 loadData();
+                drawer.closeDrawer(Gravity.END);
               }
         });
 

@@ -127,6 +127,7 @@ public class MyHttp {
                     result+=line;
                 }
             }
+            Log.e(this.toString(),result);
             if (listener!=null)
                 listener.onSuccess(result);
         } catch (IOException e) {

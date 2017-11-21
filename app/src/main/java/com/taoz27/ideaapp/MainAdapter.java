@@ -134,7 +134,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 nHolder.editView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //TODO intent to edit activity
+                        UpdateDetailActivity.IntentToUpdate(context,activity.getId());
                     }
                 });
             }

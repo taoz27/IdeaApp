@@ -1,23 +1,16 @@
 package com.taoz27.ideaapp;
 
 import android.content.Context;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.donkingliang.labels.LabelsView;
@@ -25,6 +18,7 @@ import com.github.florent37.singledateandtimepicker.dialog.SingleDateAndTimePick
 import com.taoz27.ideaapp.models.BaseResponse;
 import com.taoz27.ideaapp.models.Category2;
 import com.taoz27.ideaapp.models.CategoryResponse;
+import com.taoz27.ideaapp.models.MyActivityDetail;
 import com.taoz27.ideaapp.net.JsonUtils;
 import com.taoz27.ideaapp.net.MyHttp;
 import com.taoz27.ideaapp.net.MyHttpRequestListener;
@@ -35,20 +29,17 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by taoz27 on 2017/11/16.
+ * Created by taoz27 on 2017/11/21.
  */
 
-public class ReleaseActivity extends BaseActivity {
-    String title="发布活动";
-//    String[] lefts,rights;
-//    boolean[] oks;
-//    Long start=0L,end=0L;
+public class UpdateDetailActivity extends BaseActivity{
+    String title="修改活动";
 
-//    Recy recyclerView;
-
+    int id;
     String name,theme,place,contact,content,lable;
     long startTime,endTime;
     List<CategoryResponse> categories;
+    MyActivityDetail detail;
 
     EditText nameE,themeE,contactE,placeE,contentE;
     List<View> pages=new ArrayList<>();
@@ -62,13 +53,42 @@ public class ReleaseActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_release);
 
+        Intent intent=getIntent();
+        id=intent.getIntExtra("id",0);
         setupToolBar(title, true, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 next();
             }
         });
-        setupViews();
+        loadData();
+    }
+
+    public static void IntentToUpdate(Context context,int id){
+        Intent intent=new Intent();
+        intent.setClass(context,UpdateDetailActivity.class);
+        intent.putExtra("id",id);
+        context.startActivity(intent);
+    }
+
+    void loadData(){
+        MyHttp.Post(Urls.ManageSearch)
+                .params("id",id)
+                .execute(new MyHttpRequestListener() {
+                    @Override
+                    public void onSuccess(String response) {
+                        BaseResponse<MyActivityDetail> res=JsonUtils.fromJsonObject(response,MyActivityDetail.class);
+                        if (res.getStatus()==1){
+                            detail=res.getData();
+                            MainActivity.doCallBack(new MainActivity.HandleCallBack() {
+                                @Override
+                                public void doThings() {
+                                    setupViews();
+                                }
+                            });
+                        }
+                    }
+                });
     }
 
     void next(){
@@ -88,12 +108,14 @@ public class ReleaseActivity extends BaseActivity {
             }
             new SingleDateAndTimePickerDialog.Builder(this)
                     .title("请选择开始时间")
+                    .defaultDate(new Date(detail.getStarttime()))
                     .listener(new SingleDateAndTimePickerDialog.Listener() {
                         @Override
                         public void onDateSelected(Date date) {
                             startTime=date.getTime();
-                            new SingleDateAndTimePickerDialog.Builder(ReleaseActivity.this)
+                            new SingleDateAndTimePickerDialog.Builder(UpdateDetailActivity.this)
                                     .title("请选择结束时间")
+                                    .defaultDate(new Date(detail.getEndtime()))
                                     .listener(new SingleDateAndTimePickerDialog.Listener() {
                                         @Override
                                         public void onDateSelected(Date date) {
@@ -110,7 +132,8 @@ public class ReleaseActivity extends BaseActivity {
 //        for (boolean b:oks)
 //            if (!b)
 //                return;
-        MyHttp.Post(Urls.ManageAdd)
+        MyHttp.Post(Urls.ManageAlter)
+                .params("id",id)
                 .params("name",name)
                 .params("theme",theme)
                 .params("content",content)
@@ -124,10 +147,10 @@ public class ReleaseActivity extends BaseActivity {
                     public void onSuccess(String response) {
                         BaseResponse<Integer> res= JsonUtils.fromJsonObject(response,Integer.class);
                         if (res.getStatus()==1){
-                            MainActivity.showMsg(ReleaseActivity.this,res.getMsg());
+                            MainActivity.showMsg(UpdateDetailActivity.this,res.getMsg());
                             Log.e(this.toString(),"add success");
                         }else {
-                            MainActivity.showMsg(ReleaseActivity.this,res.getMsg());
+                            MainActivity.showMsg(UpdateDetailActivity.this,res.getMsg());
                             Log.e(this.toString(),"need login");
                         }
                     }
@@ -151,12 +174,17 @@ public class ReleaseActivity extends BaseActivity {
 //        }
 //        recyclerView.setData(lefts,rights,oks,start,end);
         mainLayout=findViewById(R.id.main_layout);
-        View page0=LayoutInflater.from(this).inflate(R.layout.test_rel,mainLayout,false);
+        View page0= LayoutInflater.from(this).inflate(R.layout.test_rel,mainLayout,false);
         nameE=page0.findViewById(R.id.name);
         themeE=page0.findViewById(R.id.theme);
         placeE=page0.findViewById(R.id.place);
         contactE=page0.findViewById(R.id.contact);
         contentE=page0.findViewById(R.id.content);
+        nameE.setText(detail.getName());
+        themeE.setText(detail.getTheme());
+        placeE.setText(detail.getPlace());
+        contactE.setText(detail.getContact());
+        contentE.setText(detail.getContent());
         pages.add(page0);
 
         LinearLayout layout=new LinearLayout(this);
@@ -190,7 +218,6 @@ public class ReleaseActivity extends BaseActivity {
                             if ((int)(v.getTag())!=tag)
                                 v.clearAllSelect();
                         }
-//                        Toast.makeText(Ma/inActivity.this, "click_id:"+ids.get(position) , Toast.LENGTH_SHORT).show();
                     }
                 }
             });

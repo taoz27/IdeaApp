@@ -30,6 +30,7 @@
         <activity android:name=".MyInfoActivity"/>
         <activity android:name=".ModifyInfoActivity"/>
         <activity android:name=".MySpaceActivity"/>
+        <activity android:name=".UpdateDetailActivity"/>
     </application>
 
 </manifest>

@@ -84,6 +84,7 @@
                     android:id="@+id/modify_ac"
                     android:layout_toLeftOf="@+id/delete"
                     android:src="@drawable/icon_edit"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:visibility="gone"/>
                 <ImageView
