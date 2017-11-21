@@ -4,8 +4,13 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <include layout="@layout/toolbar"/>
-    <com.taoz27.ideaapp.MainRecycler
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/main_recycler"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh">
+        <com.taoz27.ideaapp.MainRecycler
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_recycler"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.taoz27.ideaapp;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 
 import com.taoz27.ideaapp.models.BaseResponse;
 import com.taoz27.ideaapp.models.MyActivity;
@@ -21,6 +22,7 @@ public class MySpaceActivity extends BaseActivity{
     String title="我的空间";
 
     MainRecycler recycler;
+    SwipeRefreshLayout refreshLayout;
     List<MyActivity> activities;
 
     @Override
@@ -33,6 +35,8 @@ public class MySpaceActivity extends BaseActivity{
     }
 
     private void loadData() {
+        if (refreshLayout!=null)
+            refreshLayout.setRefreshing(true);
         MyHttp.Post(Urls.ManageList)
                 .execute(new MyHttpRequestListener() {
                     @Override
@@ -40,20 +44,54 @@ public class MySpaceActivity extends BaseActivity{
                         BaseResponse<List<MyActivity>> res= JsonUtils.fromJsonArray(response,MyActivity.class);
                         if (res.getStatus()==1){
                             activities=res.getData();
-                            handler.post(setupViews);
+                            if (recycler==null) {
+                                MainActivity.doCallBack(new MainActivity.HandleCallBack() {
+                                    @Override
+                                    public void doThings() {
+                                        setupViews();
+                                    }
+                                });
+                            }else {
+                                MainActivity.doCallBack(new MainActivity.HandleCallBack() {
+                                    @Override
+                                    public void doThings() {
+                                        recycler.notifyDataChanged();
+                                    }
+                                });
+                            }
+                        }
+                        if (refreshLayout!=null) {
+                            MainActivity.doCallBack(new MainActivity.HandleCallBack() {
+                                @Override
+                                public void doThings() {
+                                    refreshLayout.setRefreshing(false);
+                                }
+                            });
                         }
                     }
                 });
     }
 
-    Handler handler=new Handler();
-    Runnable setupViews=new Runnable() {
-        @Override
-        public void run() {
+    void setupViews(){
+        setupRefresh();
+        setupRecycler();
+    }
+
+    void setupRefresh(){
+        refreshLayout=findViewById(R.id.refresh);
+        refreshLayout.setColorSchemeColors(getResources().getColor(R.color.colorPrimary));
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadData();
+            }
+        });
+    }
+
+    void setupRecycler(){
             recycler=findViewById(R.id.main_recycler);
             recycler.setData(activities);
             recycler.setRemovable(true);
             recycler.notifyDataChanged();
-        }
-    };
+    }
 }

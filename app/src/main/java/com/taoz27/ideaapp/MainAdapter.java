@@ -130,6 +130,13 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                                 });
                     }
                 });
+                nHolder.editView.setVisibility(View.VISIBLE);
+                nHolder.editView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //TODO intent to edit activity
+                    }
+                });
             }
         }
     }
@@ -150,13 +157,14 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     class NormalItemHolder extends RecyclerView.ViewHolder{
         CircleImageView headView;
-        ImageView deleteView,backView;
+        ImageView editView,deleteView,backView;
         TextView insText,timeText,nameText;
         LabelsView labelsView;
 
         public NormalItemHolder(View itemView) {
             super(itemView);
             headView =itemView.findViewById(R.id.image);
+            editView=itemView.findViewById(R.id.modify_ac);
             deleteView=itemView.findViewById(R.id.delete);
             insText=itemView.findViewById(R.id.institution);
             timeText=itemView.findViewById(R.id.start_time);

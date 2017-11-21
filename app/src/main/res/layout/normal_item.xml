@@ -75,16 +75,26 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:paddingTop="5dp"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
                 <include layout="@layout/z_labels"/>
                 <ImageView
-                    android:layout_width="@dimen/icon_width"
-                    android:layout_height="@dimen/icon_width"
+                    android:layout_width="@dimen/icon_width_l"
+                    android:layout_height="@dimen/icon_width_l"
+                    android:id="@+id/modify_ac"
+                    android:layout_toLeftOf="@+id/delete"
+                    android:src="@drawable/icon_edit"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"/>
+                <ImageView
+                    android:layout_width="@dimen/icon_width_l"
+                    android:layout_height="30dp"
                     android:id="@+id/delete"
                     android:src="@drawable/icon_delete"
                     android:visibility="gone"
                     android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"/>
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
